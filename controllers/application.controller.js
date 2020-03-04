@@ -1,25 +1,24 @@
-var express = require("express");
+var express = require('express');
 var router = express.Router();
-var { Application } = require("../models/application.model");
-var auth = require("../middleware/auth");
-
+var { Application } = require('../models/application.model');
+var auth = require('../middleware/auth');
 
 let applicationObject = new Object();
 
-router.post("/add", async (req, res) => {
+router.get('/test', (req, res) => {
+  return res.status(200).send('hey');
+});
 
-    try {
+router.post('/add', async (req, res) => {
+  try {
+    applicationObject.append(req.body);
 
-            applicationObject.append(req.body);
-        
-        if(result){
-            res.status(200).send("Appended Successfully!");
-        }
-    } catch (error) {
-        return res.status(400).send(error.message);
+    if (result) {
+      res.status(200).send('Appended Successfully!');
     }
+  } catch (error) {
+    return res.status(400).send(error.message);
+  }
 });
 
 module.exports = router;
-
-
