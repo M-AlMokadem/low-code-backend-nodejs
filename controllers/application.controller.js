@@ -29,10 +29,10 @@ router.post('/create', (req, res) => {
       console.log(`error: ${error.message}`);
       return errorCallback({ error: `error: ${error.message}` });
     }
-    if (stderr) {
-      console.log(`stderr: ${stderr}`);
-      return errorCallback({ error: `stderr: ${stderr}` });
-    }
+    // if (stderr) {
+    //   console.log(`stderr: ${stderr}`);
+    //   return errorCallback({ error: `stderr: ${stderr}` });
+    // }
     console.log(`stdout: ${stdout}`);
     cfPush(
       appPath,
