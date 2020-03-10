@@ -1,19 +1,24 @@
+# echo "start"
+
+# sleep 5
+
+# echo "after 5 secs"
+
 cd temp-web-site
 
 hugo new site web-site
 
-cd web-site
+cd web-site/themes
 
 git init
 
-git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
+git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git hello-friend-ng
 
-cd ../..
+cd ../../..
 
-\cp ./temp-web-site/config.toml ./temp-web-site/web-site/config.toml
-
-node ./temp-web-site/update-title.js
+\cp temp-web-site/config.toml temp-web-site/web-site/config.toml
 
 cd temp-web-site/web-site
 
 hugo -D
+

@@ -4,7 +4,6 @@ const ngrok = require('ngrok');
 const { mongoose } = require('./startup/db.js');
 const app = express();
 const bodyParser = require('body-parser');
-app.use(bodyParser.json());
 const cors = require('cors');
 
 //use below link inside API to deploy with path ./temp-web-site/web-site/public
@@ -22,6 +21,8 @@ const cors = require('cors');
 //     console.log('error', err);
 //   }
 // );
+
+app.use(bodyParser.json());
 
 let url;
 
