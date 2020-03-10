@@ -7,6 +7,22 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 const cors = require('cors');
 
+//use below link inside API to deploy with path ./temp-web-site/web-site/public
+// const { cfPush } = require('./controllers/cf-push');
+// const lowCodeAppName = 'low-code-app';
+
+// require('dotenv').config();
+// cfPush(
+//   './app',
+//   lowCodeAppName,
+//   url => {
+//     console.log('URL=>', url);
+//   },
+//   err => {
+//     console.log('error', err);
+//   }
+// );
+
 let url;
 
 app.use(function(req, res, next) {

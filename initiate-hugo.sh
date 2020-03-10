@@ -13,3 +13,7 @@ cd ../..
 \cp ./temp-web-site/config.toml ./temp-web-site/web-site/config.toml
 
 node ./temp-web-site/update-title.js
+
+cd temp-web-site/web-site
+
+hugo -D
