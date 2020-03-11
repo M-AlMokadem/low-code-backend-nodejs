@@ -24,7 +24,7 @@ theme = "hello-friend-ng"
 
 [languages]
   [languages.en]
-    title = "Hello Friend NG"
+    title = "digitalization"
     subtitle = "A simple theme for Hugo"
     keywords = ""
     copyright = ""

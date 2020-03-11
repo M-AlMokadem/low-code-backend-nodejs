@@ -3,6 +3,7 @@ require('dotenv').config();
 const { exec } = require('child_process');
 
 const cfPush = (path, appName, callback, errorCallback) => {
+  console.log('cfPush has been called');
   const endpoint = process.env.ENDPOINT;
   const username = process.env.USER_NAME;
   const password = process.env.PASSWORD;
